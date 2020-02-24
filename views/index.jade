@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href='blog/post/new') Create Post
+
+  h3 All posts
+  ul
+   for p in posts
+    li 
+      a(href=p.url) #{p.title}
+      p #{p.content}
+

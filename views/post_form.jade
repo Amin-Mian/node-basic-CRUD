@@ -1,0 +1,21 @@
+extends layout
+block content
+  h1 create post
+
+
+
+  form(method='POST' action='')
+    label(for='title') Title:
+    if(post)
+      input(type='text',name='title', required='true' value= post.title)
+     else
+      input(type='text',name='title', required='true')
+    br
+    label(for='content') Content:
+    if(post)
+      textarea(name='content', required='true')= post.content
+    else
+      textarea(name='content', required='true')
+
+
+    button(type='submit') Post

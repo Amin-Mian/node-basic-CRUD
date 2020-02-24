@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  br
+  h3 #{post.title}
+  hr
+  p #{post.content}
+  hr
+
+  a(href=post.url+'/delete') delete post
+  br
+  br
+  a(href=post.url+'/update') update post
+

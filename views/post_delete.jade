@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  p Do you really want to delete this Post? 
+  form(method='POST' action='')
+    input(type='hidden',name='postid', required='true', value=post._id )
+    button(type='submit') Delete
